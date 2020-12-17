@@ -4,8 +4,8 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 
-import phone from './../Portfolio-Images/Contact/porfolio\ icons-05.png';
-import email from './../Portfolio-Images/Contact/porfolio\ icons-07.png';
+import phone from './../Portfolio-Images/Contact/porfolio icons-05.png';
+import email from './../Portfolio-Images/Contact/porfolio icons-07.png';
 
 class PortfolioSlider extends React.Component {
     constructor(props) {
@@ -48,19 +48,19 @@ class PortfolioSlider extends React.Component {
             <div>
                 <Splide options={primaryOptions} ref={this.primaryRef}>
                     <SplideSlide>
-                        <img src={phone} alt="Image 1" />
+                        <img src={phone} alt="Phone" />
                     </SplideSlide>
                     <SplideSlide>
-                        <img src={email} alt="Image 2" />
+                        <img src={email} alt="Email" />
                     </SplideSlide>
                 </Splide>
 
                 <Splide options={secondaryOptions} ref={this.secondaryRef}>
                     <SplideSlide>
-                        <img src={email} alt="Image 1" />
+                        <img src={email} alt="Phone" />
                     </SplideSlide>
                     <SplideSlide>
-                        <img src={phone} alt="Image 2" />
+                        <img src={phone} alt="Email" />
                     </SplideSlide>
                 </Splide>
             </div>

@@ -12,11 +12,11 @@ class About extends React.Component {
                 <div className="about-header">
                     <h1>About</h1>
                     <div className="about-buttons">
-                        <a href="https://www.linkedin.com/in/lucy-swett" target="_blank"><div className="button-style">Connect on LinkedIn</div></a>
+                        <a href="https://www.linkedin.com/in/lucy-swett" rel="noreferrer" target="_blank"><div className="button-style">Connect on LinkedIn</div></a>
                         <div className="button-style">View My Resume</div>
                     </div>
                 </div>
-                <img src={about_img} />
+                <img alt="Lucy Swett" src={about_img} />
                 <p>
                     Hi, I’m Lucy. I am a graphic designer in Jacksonville, Florida. In 2019, I graduated with a BA in Computer Science and minors in Graphic Design and Chinese from Lehigh University in Bethlehem, Pennsylvania. I enjoy helping improve customer engagement with products and services through my unique combination of technical and design skills.
 

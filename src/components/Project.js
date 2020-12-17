@@ -1,6 +1,6 @@
 import React from 'react';
 import $ from "jquery";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 class Project extends React.Component {
     componentDidMount() {
@@ -30,7 +30,7 @@ class Project extends React.Component {
             <div className="project">
                 {/* <Link to={this.props.path}> */}
                 <a href={"/" + this.props.path }>
-                <img className="project-img" src={this.props.image} />
+                <img className="project-img" alt={this.props.image} src={this.props.image} />
                 {/* <Redirect to={"/" + this.props.title + ".js"} /> */}
                 
                     <div className="middle">

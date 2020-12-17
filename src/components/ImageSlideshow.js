@@ -3,11 +3,11 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 
-import SimpleImageSlider from "react-simple-image-slider";
-import $ from "jquery";
+// import SimpleImageSlider from "react-simple-image-slider";
+// import $ from "jquery";
 
-import phone from './../Portfolio-Images/Contact/porfolio\ icons-05.png';
-import email from './../Portfolio-Images/Contact/porfolio\ icons-07.png';
+import phone from './../Portfolio-Images/Contact/porfolio icons-05.png';
+import email from './../Portfolio-Images/Contact/porfolio icons-07.png';
 
 class ImageSlideshow extends React.Component {
     // componentDidMount() {
@@ -62,10 +62,10 @@ class ImageSlideshow extends React.Component {
             <div className="slideshow">
                 <Splide>
                     <SplideSlide>
-                        <img src={phone} alt="Image 1" />
+                        <img src={phone} alt="Phone" />
                     </SplideSlide>
                     <SplideSlide>
-                        <img src={email} alt="Image 2" />
+                        <img src={email} alt="Email" />
                     </SplideSlide>
                 </Splide>
                 {/* <div className="w3-content w3-display-container">

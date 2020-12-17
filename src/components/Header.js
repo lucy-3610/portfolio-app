@@ -7,7 +7,7 @@ class Header extends React.Component {
     return (
             <div className="header">
                 <Link to={"portfolio"}>
-                <img id="monogram" src={lucy_swett_monogram} />
+                <img id="monogram" alt="Lucy Swett Monogram" src={lucy_swett_monogram} />
                 </Link>
                 <button type="button" id="nav-button">
                     <i id="bars" className="fa fa-bars"></i>
