@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/portfolio-app/static/css/main.4da3e74b.chunk.css",
+    "main.js": "/portfolio-app/static/js/main.6b67c66c.chunk.js",
+    "main.js.map": "/portfolio-app/static/js/main.6b67c66c.chunk.js.map",
+    "runtime-main.js": "/portfolio-app/static/js/runtime-main.aacbc8cd.js",
+    "runtime-main.js.map": "/portfolio-app/static/js/runtime-main.aacbc8cd.js.map",
+    "static/css/2.b1a3c52e.chunk.css": "/portfolio-app/static/css/2.b1a3c52e.chunk.css",
+    "static/js/2.c5df72a1.chunk.js": "/portfolio-app/static/js/2.c5df72a1.chunk.js",
+    "static/js/2.c5df72a1.chunk.js.map": "/portfolio-app/static/js/2.c5df72a1.chunk.js.map",
+    "static/js/3.63979d14.chunk.js": "/portfolio-app/static/js/3.63979d14.chunk.js",
+    "static/js/3.63979d14.chunk.js.map": "/portfolio-app/static/js/3.63979d14.chunk.js.map",
+    "index.html": "/portfolio-app/index.html",
+    "static/css/2.b1a3c52e.chunk.css.map": "/portfolio-app/static/css/2.b1a3c52e.chunk.css.map",
+    "static/css/main.4da3e74b.chunk.css.map": "/portfolio-app/static/css/main.4da3e74b.chunk.css.map",
+    "static/js/2.c5df72a1.chunk.js.LICENSE.txt": "/portfolio-app/static/js/2.c5df72a1.chunk.js.LICENSE.txt",
+    "static/media/Accountability_Counsel.2127e648.jpg": "/portfolio-app/static/media/Accountability_Counsel.2127e648.jpg",
+    "static/media/COE22.b61a200c.jpg": "/portfolio-app/static/media/COE22.b61a200c.jpg",
+    "static/media/Cardhub.473135bf.png": "/portfolio-app/static/media/Cardhub.473135bf.png",
+    "static/media/Dreams.6f39444a.png": "/portfolio-app/static/media/Dreams.6f39444a.png",
+    "static/media/ECC.503c765c.jpg": "/portfolio-app/static/media/ECC.503c765c.jpg",
+    "static/media/index.scss": "/portfolio-app/static/media/Lucy Swett Portfolio Landing Page BG.70dcf082.jpg",
+    "static/media/Lucy_Swett_About.c6fd5bac.jpg": "/portfolio-app/static/media/Lucy_Swett_About.c6fd5bac.jpg",
+    "static/media/Lucy_Swett_Monogram.d933cadd.png": "/portfolio-app/static/media/Lucy_Swett_Monogram.d933cadd.png",
+    "static/media/PBTS.5134ac1c.png": "/portfolio-app/static/media/PBTS.5134ac1c.png",
+    "static/media/Purl.cac60c2a.jpg": "/portfolio-app/static/media/Purl.cac60c2a.jpg",
+    "static/media/TotL.025a1ca9.jpg": "/portfolio-app/static/media/TotL.025a1ca9.jpg",
+    "static/media/porfolio icons-05.94476f72.png": "/portfolio-app/static/media/porfolio icons-05.94476f72.png",
+    "static/media/porfolio icons-07.0fff34f4.png": "/portfolio-app/static/media/porfolio icons-07.0fff34f4.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aacbc8cd.js",
+    "static/css/2.b1a3c52e.chunk.css",
+    "static/js/2.c5df72a1.chunk.js",
+    "static/css/main.4da3e74b.chunk.css",
+    "static/js/main.6b67c66c.chunk.js"
+  ]
+}
