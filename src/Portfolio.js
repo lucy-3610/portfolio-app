@@ -17,7 +17,7 @@ class Portfolio extends React.Component {
     return (
         <div>
             <Header />
-      <div className="projects">
+      <div className="wrapper projects">
         <Project image={coe22} project={"Yay"} path={"jpl"} title={"The Jacksonville Public Library"} />
         <Project image={coe22} path={"coe22"} title={"The Church of Eleven22"} />
         <Project image={pbts} path={"pbts"} title={"Players by the Sea"} />

@@ -5,14 +5,14 @@ import Header from './components/Header';
 class LandingPage extends React.Component {
     render() {
         return (
-            <div class="landing-page">
+            <div className="landing-page">
                 <Header />
-                <div>
+                <div className="wrapper">
                     <h2>Hi, I'm</h2>
                     <h1>Lucy Swett</h1>
                     <h3>Design &amp; Marketing</h3>
                     <p>Motivated young professional seeking to empower people through technology.</p>
-                    <Link to="/portfolio">PORTFOLIO</Link>
+                    <Link id="portfolio-link" to="/portfolio">PORTFOLIO</Link>
                 </div>
             </div>
         );
