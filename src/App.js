@@ -5,6 +5,12 @@ import ProjectInfo from './components/ProjectInfo';
 import About from './components/About';
 import './App.css';
 import Contact from './components/Contact';
+import ImageSlideshow from './components/ImageSlideshow';
+
+import totl_back from './Portfolio-Images/TotL/TotL-back.jpg';
+import totl_front from './Portfolio-Images/TotL/TotL-front.jpg';
+import totl_inside from './Portfolio-Images/TotL/TotL-inside.jpg';
+import totl_top from './Portfolio-Images/TotL/TotL-top.jpg';
 
 function App() {
   return (
@@ -39,7 +45,9 @@ function App() {
           <Route
             path='/pbts'
             render={(props) => (
-              <ProjectInfo project={"Players by the Sea"} />
+              <div>
+              <ProjectInfo project={"Players by the Sea"} /><ImageSlideshow images={totl_front, totl_top, totl_back, totl_inside} /></div>
+              
             )}
           />
           <Route

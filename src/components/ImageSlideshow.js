@@ -6,10 +6,30 @@ import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 // import SimpleImageSlider from "react-simple-image-slider";
 // import $ from "jquery";
 
+
+
+
 import phone from './../Portfolio-Images/Contact/porfolio icons-05.png';
 import email from './../Portfolio-Images/Contact/porfolio icons-07.png';
+import Image from './Image';
 
 class ImageSlideshow extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            slideshowImages: "Images"
+        };
+    }
+    static getDerivedStateFromProps(props, state) {
+        return {
+            slideshowImages: props.images
+        };
+    }
+    // componentDidMount() {
+    //     // for(var i=0; i < this.props.images.length; i++) {
+            
+    //     // }
+    // }
     // componentDidMount() {
     //     alert("Hi")
     //     var slideIndex = 1;
@@ -49,47 +69,16 @@ class ImageSlideshow extends React.Component {
     //     }
     // }
     render() {
-        // const images = [
-        //     { url: "./../Portfolio-Images/Contact/porfolio\ icons-05.png" },
-        //     { url: "" },
-        //     { url: "images/3.jpg" },
-        //     { url: "images/4.jpg" },
-        //     { url: "images/5.jpg" },
-        //     { url: "images/6.jpg" },
-        //     { url: "images/7.jpg" },
-        // ];
+        var arr=[this.state.images];
+        console.log(arr);
+        var imageElements=[];
+        for (var i=0; i<arr.length; i++) {
+            imageElements.push(<Image image={ this.state.images[i] } /> );
+        }
         return (
-            <div className="slideshow">
-                <Splide>
-                    <SplideSlide>
-                        <img src={phone} alt="Phone" />
-                    </SplideSlide>
-                    <SplideSlide>
-                        <img src={email} alt="Email" />
-                    </SplideSlide>
-                </Splide>
-                {/* <div className="w3-content w3-display-container">
-                    <img className="mySlides" src={phone} />
-                    <img className="mySlides" src={email} />
-                    <img className="mySlides" src={phone} />
-                    <div className="w3-center w3-display-bottommiddle" style={{width: '100%'}}>
-                        <div className="w3-left" onclick={"plusDivs(-1)"}>&#10094;</div>
-                        <div className="w3-left" onclick="alert(Hello)">&#10094;</div>
-                        <div className="w3-right" onclick={"plusDivs(1)"}>&#10095;</div>
-                        <span className="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
-                        <span className="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
-                        <span className="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
-                    </div>
-                </div> */}
-                <div>
-                    {/* <SimpleImageSlider
-                    width={896}
-                    height={504}
-                    images={images}
-                /> */}
-                </div>
-
-            </div>
+            <Splide>
+                    {imageElements}
+            </Splide>
         );
 
     }

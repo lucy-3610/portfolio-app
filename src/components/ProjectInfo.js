@@ -19,17 +19,19 @@ class ProjectInfo extends React.Component {
         };
     }
     render() {
+        console.log("this is props length: " + this.props.length);
         return (
+            
             <div className="project-info">
                 <Header />
                 <h1>{this.state.projectTitle}</h1>
-                <ImageSlideshow />
+                {/* <ImageSlideshow /> */}
                 <div className="project-p">
                     <div className="tagline">{this.state.projectTagline}<br /></div>
                     <p>{this.state.projectInfo}</p>
                     <div className="lets-talk">Let's Talk</div>
                 </div>
-                <PortfolioSlider />
+                {/* <PortfolioSlider /> */}
                 <Footer />
 
             </div>

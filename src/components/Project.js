@@ -5,13 +5,13 @@ import $ from "jquery";
 class Project extends React.Component {
     componentDidMount() {
         // alert("Hi")
-        $(".project").mouseover(function () {
-            $(this).find(".hoverable").show();
-        });
+        // $(".project").mouseover(function () {
+        //     $(this).find(".hoverable").show();
+        // });
 
-        $(".project").mouseout(function () {
-            $(this).find(".hoverable").hide();
-        });
+        // $(".project").mouseout(function () {
+        //     $(this).find(".hoverable").hide();
+        // });
     }
     render() {
         return (
@@ -32,10 +32,9 @@ class Project extends React.Component {
                 <a href={"/" + this.props.path }>
                 <img className="project-img" alt={this.props.image} src={this.props.image} />
                 {/* <Redirect to={"/" + this.props.title + ".js"} /> */}
-                
-                    <div className="middle">
+                <div className="middle">
                         <div className="hoverable">{this.props.title}</div>
-                    </div>
+                        </div>
                 </a>
                 {/* </Link> */}
             </div>
