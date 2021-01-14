@@ -14,22 +14,32 @@ import email from './../Portfolio-Images/Contact/porfolio icons-07.png';
 import Image from './Image';
 
 class ImageSlideshow extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            slideshowImages: "Images"
-        };
-    }
-    static getDerivedStateFromProps(props, state) {
-        return {
-            slideshowImages: props.images
-        };
-    }
-    // componentDidMount() {
-    //     // for(var i=0; i < this.props.images.length; i++) {
-            
-    //     // }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         slideshowImages: "Images"
+    //     };
     // }
+    // static getDerivedStateFromProps(props, state) {
+    //     return {
+    //         slideshowImages: props.images
+    //     };
+    // }
+    componentDidMount() {
+        if(this.props.images){
+            console.log(this.props.images)
+            // var slideshow = this.props.images.map(function(slideshow){
+            // // var projectImage = 'images/portfolio/'+projects.image;
+        
+            // // return <li key={projects.title}>
+            // //          <img alt={projects.title} src={projectImage} />
+            // //        </li>
+            // })
+          }
+        // for(var i=0; i < this.props.images.length; i++) {
+            
+        // }
+    }
     // componentDidMount() {
     //     alert("Hi")
     //     var slideIndex = 1;
@@ -69,12 +79,13 @@ class ImageSlideshow extends React.Component {
     //     }
     // }
     render() {
-        var arr=[this.state.images];
-        console.log(arr);
+        // var arr=[this.state.images];
+        console.log("you are in imageslideshow")
+        // console.log(arr);
         var imageElements=[];
-        for (var i=0; i<arr.length; i++) {
-            imageElements.push(<Image image={ this.state.images[i] } /> );
-        }
+        // for (var i=0; i<arr.length; i++) {
+        //     imageElements.push(<Image image={ this.state.images[i] } /> );
+        // }
         return (
             <Splide>
                     {imageElements}

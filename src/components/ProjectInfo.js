@@ -19,7 +19,7 @@ class ProjectInfo extends React.Component {
         };
     }
     render() {
-        console.log("this is props length: " + this.props.length);
+        // console.log("this is props length: " + this.props.length);
         return (
             
             <div className="project-info">
