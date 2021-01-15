@@ -13,6 +13,25 @@ import totl_inside from './Portfolio-Images/TotL/TotL-inside.jpg';
 import totl_top from './Portfolio-Images/TotL/TotL-top.jpg';
 
 function App() {
+  let totl_images = [
+    {
+      id: 1,
+      imageName: totl_back
+    },
+    {
+      id: 2,
+      imageName: totl_front
+    },
+    {
+      id: 3,
+      imageName: totl_inside
+    },
+    {
+      id: 4,
+      imageName: totl_top
+    }
+  ];
+
   return (
     <div className="App">
       <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -46,8 +65,8 @@ function App() {
             path='/pbts'
             render={(props) => (
               <div>
-              <ProjectInfo project={"Players by the Sea"} /><ImageSlideshow images={totl_front, totl_top, totl_back, totl_inside} /></div>
-              
+                <ProjectInfo project={"Players by the Sea"} /><ImageSlideshow images={totl_images} /></div>
+
             )}
           />
           <Route

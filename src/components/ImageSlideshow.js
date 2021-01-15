@@ -26,18 +26,19 @@ class ImageSlideshow extends React.Component {
     //     };
     // }
     componentDidMount() {
-        if(this.props.images){
-            console.log(this.props.images)
+        if (this.props.images) {
+            // console.log(this.props.images)
+
             // var slideshow = this.props.images.map(function(slideshow){
             // // var projectImage = 'images/portfolio/'+projects.image;
-        
+
             // // return <li key={projects.title}>
             // //          <img alt={projects.title} src={projectImage} />
             // //        </li>
             // })
-          }
+        }
         // for(var i=0; i < this.props.images.length; i++) {
-            
+
         // }
     }
     // componentDidMount() {
@@ -81,14 +82,23 @@ class ImageSlideshow extends React.Component {
     render() {
         // var arr=[this.state.images];
         console.log("you are in imageslideshow")
+        // var doubled = this.props.images.map((number) => console.log(number));
+        const imageItems = this.props.images.map(
+            value => <Image key={value.id} image={value.imageName} />
+                );  
+        // const listItems = this.props.images.map((number, id) =>
+        //     console.log(number)
+        //     // <Image key={number} image={number} />
+        // );
         // console.log(arr);
-        var imageElements=[];
+        var imageElements = [];
         // for (var i=0; i<arr.length; i++) {
         //     imageElements.push(<Image image={ this.state.images[i] } /> );
         // }
         return (
-            <Splide>
-                    {imageElements}
+            <Splide style="width: 500px;">
+                {imageItems}
+                {/* <Image image={doubled} /> */}
             </Splide>
         );
 
