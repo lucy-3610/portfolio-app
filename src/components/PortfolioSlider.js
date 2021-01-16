@@ -1,11 +1,9 @@
 import React from 'react';
-
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 
-import phone from './../Portfolio-Images/Contact/porfolio icons-05.png';
-import email from './../Portfolio-Images/Contact/porfolio icons-07.png';
+import Image from './Image';
+
 
 class PortfolioSlider extends React.Component {
     constructor(props) {
@@ -17,53 +15,30 @@ class PortfolioSlider extends React.Component {
 
     componentDidMount() {
         // Set the sync target right after the component is mounted.
-        this.primaryRef.current.sync(this.secondaryRef.current.splide);
+        // this.primaryRef.current.sync(this.secondaryRef.current.splide);
     }
 
     render() {
         const primaryOptions = {
             type: 'loop',
-            width: 800,
-            perPage: 2,
-            perMove: 1,
-            gap: '1rem',
-            pagination: false,
-        };
-
-        const secondaryOptions = {
-            type: 'slide',
-            rewind: true,
-            width: 800,
-            gap: '1rem',
-            pagination: false,
-            fixedWidth: 110,
-            fixedHeight: 70,
+            fixedWidth: 200,
+            height: 200,
+            gap: 10,
+            // rewind: true,
             cover: true,
-            focus: 'center',
-            isNavigation: true,
-            updateOnMove: true,
+            perMove: 1,
+            pagination: false,
         };
+        console.log("you are in portfolio slider");
+        const imageItems = this.props.images.map(
+            value => <Image key={value.id} image={value.imageName} />
+        );
 
         return (
-            <div>
-                <Splide options={primaryOptions} ref={this.primaryRef}>
-                    <SplideSlide>
-                        <img src={phone} alt="Phone" />
-                    </SplideSlide>
-                    <SplideSlide>
-                        <img src={email} alt="Email" />
-                    </SplideSlide>
-                </Splide>
-
-                <Splide options={secondaryOptions} ref={this.secondaryRef}>
-                    <SplideSlide>
-                        <img src={email} alt="Phone" />
-                    </SplideSlide>
-                    <SplideSlide>
-                        <img src={phone} alt="Email" />
-                    </SplideSlide>
-                </Splide>
-            </div>
+            // <Splide options={secondaryOptions} ref={this.secondaryRef}>
+            <Splide className="portfolio-slider" options={primaryOptions}>
+                {imageItems}
+            </Splide>
         );
     }
 }

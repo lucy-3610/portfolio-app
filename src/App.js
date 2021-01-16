@@ -6,31 +6,61 @@ import About from './components/About';
 import './App.css';
 import Contact from './components/Contact';
 import ImageSlideshow from './components/ImageSlideshow';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import TotL from './components/TotL';
 
-import totl_back from './Portfolio-Images/TotL/TotL-back.jpg';
-import totl_front from './Portfolio-Images/TotL/TotL-front.jpg';
-import totl_inside from './Portfolio-Images/TotL/TotL-inside.jpg';
-import totl_top from './Portfolio-Images/TotL/TotL-top.jpg';
+import coe22 from './Portfolio-Images/Projects/COE22.jpg';
+import pbts from './Portfolio-Images/Projects/PBTS.png';
+import purl from './Portfolio-Images/Projects/Purl.jpg';
+import accountability_counsel from './Portfolio-Images/Projects/Accountability_Counsel.jpg';
+import ecc from './Portfolio-Images/Projects/ECC.jpg';
+import cardhub from './Portfolio-Images/Projects/Cardhub.png';
+import totl from './Portfolio-Images/Projects/TotL.jpg';
+import dreams from './Portfolio-Images/Projects/Dreams.png';
+
+import PortfolioSlider from './components/PortfolioSlider';
 
 function App() {
+  
   let totl_images = [
     {
-      id: 1,
-      imageName: totl_back
+      id: 7,
+      imageName: cardhub
     },
     {
+      id: 8,
+      imageName: totl
+    },
+    {
+      id: 9,
+      imageName: dreams
+    },
+    // {
+    //   id: 1,
+    //   imageName: jpl
+    // },
+    {
       id: 2,
-      imageName: totl_front
+      imageName: coe22
     },
     {
       id: 3,
-      imageName: totl_inside
+      imageName: pbts
     },
     {
       id: 4,
-      imageName: totl_top
+      imageName: purl
+    },
+    {
+      id: 5,
+      imageName: accountability_counsel
+    },
+    {
+      id: 6,
+      imageName: ecc
     }
-  ];
+  ]
 
   return (
     <div className="App">
@@ -65,7 +95,7 @@ function App() {
             path='/pbts'
             render={(props) => (
               <div>
-                <ProjectInfo project={"Players by the Sea"} /><ImageSlideshow images={totl_images} /></div>
+                <ProjectInfo project={"Players by the Sea"} /></div>
 
             )}
           />
@@ -91,7 +121,13 @@ function App() {
           <Route
             path='/totl'
             render={(props) => (
-              <ProjectInfo project={"Tea on the Loose"} />
+              <div>
+                <Header />
+                <TotL />
+                <PortfolioSlider images={totl_images} />
+                <Footer />
+              </div>
+
             )}
           />
           <Route

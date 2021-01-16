@@ -1,21 +1,17 @@
 import React from 'react';
-import Footer from './Footer';
-import Header from './Header';
-import ImageSlideshow from './ImageSlideshow';
-import PortfolioSlider from './PortfolioSlider';
 
 class ProjectInfo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            projectTitle: "Project Title",
+            projectDirections: "Project Directions",
             projectInfo: "Project Info",
             projectTagline: "Project Tagline"
         };
     }
     static getDerivedStateFromProps(props, state) {
         return {
-            projectTitle: props.project, projectInfo: props.text, projectTagline: props.tagline
+            projectDirections: props.directions, projectInfo: props.text, projectTagline: props.tagline
         };
     }
     render() {
@@ -23,16 +19,14 @@ class ProjectInfo extends React.Component {
         return (
             
             <div className="project-info">
-                <Header />
-                <h1>{this.state.projectTitle}</h1>
                 {/* <ImageSlideshow /> */}
                 <div className="project-p">
                     <div className="tagline">{this.state.projectTagline}<br /></div>
-                    <p>{this.state.projectInfo}</p>
+                    <p><em>{this.state.projectDirections}</em></p>
+                    <p className="info">{this.state.projectInfo}</p>
                     <div className="lets-talk">Let's Talk</div>
                 </div>
                 {/* <PortfolioSlider /> */}
-                <Footer />
 
             </div>
         );
