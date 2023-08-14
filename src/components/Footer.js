@@ -2,8 +2,9 @@ import React from 'react';
 
 class Footer extends React.Component {
   render() {
-    return <p className="footer">&copy; 2020 by Lucy Swett</p>;
-   
+    var d = new Date();
+    var n = d.getFullYear();
+    return <p className="footer text-center mt-3">&copy; {n} by Lucy Swett</p>;
     }
 }
 

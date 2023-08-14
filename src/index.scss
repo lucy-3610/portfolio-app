@@ -2,7 +2,6 @@
 $signature-color: #E95959;
 $secondary-color : #333;
 
-
 body {
   margin: 0 auto !important;
   font-family: 'Questrial', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
@@ -13,12 +12,21 @@ body {
   font-size: 16px;
 }
 
-.wrapper { 
-  width: 80%; 
-  margin: 0 auto;
+.desktop-nav a {
+  margin: 5px;
+  color: $signature-color !important;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
 }
 
-a, a:hover {
+img {
+  width: 100%;
+}
+
+a {
   text-decoration: none !important;
 }
 
@@ -27,7 +35,7 @@ code {
     monospace;
 }
 
-.body { 
+.wrapper {
   width: 80%;
   margin: 0 auto;
 }
@@ -38,155 +46,175 @@ code {
   height: 60px;
 }
 
-.header {
-  padding: 5%;
-  // margin: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-#nav-button {
-  display: none;
-}
-
-.desktop-nav {
-  text-transform: uppercase;
-  display: flex;
-  font-weight: bold;
-  p {
-    display: inline;
-    padding: 10px;
-    font-family: "Open Sans", sans-serif;
-    color: $signature-color;
-  }
-  p:hover {
-    color: #F1998D;
-    transition: color 0.4s ease 0s;
-  }
-  a {
-    text-decoration: none;
-  }
-}
-
 #bars {
   font-size: 2em;
 }
 
-.footer {
-  text-align: center;
+.animated-icon1,
+.animated-icon2,
+.animated-icon3 {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
 }
 
-.landing-page {
-  background-image: url("./Portfolio-Images/Lucy\ Swett\ Portfolio\ Landing\ Page\ BG.jpg");
-  background-position: 50% 15%;
-  text-align: left;
-  height: 100vh;
-  #portfolio-link {
-    display: inline-block;
-    color: white;
-    background-color: black;
-    padding: 1.5%;
-    margin: 1% 0;
-    transition: 0.6s;
-  }
-  #portfolio-link:hover { background-color: $signature-color; }
-  h1, h2, h3 {
-    font-family: "Rozha One", serif;
-    margin: 0;
-  }
-  h1, h2 { font-weight: bold; }
-  h1 { font-size: 80px; }
-  h2 { font-size: 40px; }
-  h3 { font-size: 35px; }
-}
-
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-  // max-width: 90%;
-  margin: 0 auto;
-}
-
-.project {
-  // margin: 5%;
-    height: 50vh;
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    margin: 0;
-    width: 33%;
-  // height: 280px;
-  a {
-    text-decoration: none;
-    color: black;
-    width: 280px;
-    opacity: 1;
-  }
-  /* flex-basis: 33%; */
-}
-
-.project-img {
+.animated-icon1 span,
+.animated-icon2 span,
+.animated-icon3 span {
   display: block;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  max-height: 100%;
-  width: auto;
-  transform: translate(-50%, -50%);
-  opacity: 1;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  width: 90%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.project:hover .project-img {
-  opacity: 0.3;
-}
-
-.project:hover .middle {
-  opacity: 1;
-}
-
-.hoverable {
-  // margin: 0;
-  // position: absolute;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
-  font-weight: bold;
-  font-size: 36px;
-  z-index: 100;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-  color: black;
-  // height: 00px;
-  line-height: 1;
-  margin: 0 auto;
-  width: 75%;
-  height: 100%;
-}
-
-.slideshow {
-  width: 440px;
-  float: left;
-}
-
-.slideshow img {
+  height: 3px;
   width: 100%;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.animated-icon2 span {
+  background: $secondary-color;
+}
+
+.animated-icon2 span:nth-child(1) {
+  top: 0px;
+}
+
+.animated-icon2 span:nth-child(2),
+.animated-icon2 span:nth-child(3) {
+  top: 10px;
+}
+
+.animated-icon2 span:nth-child(4) {
+  top: 20px;
+}
+
+.animated-icon2.open span:nth-child(1) {
+  top: 11px;
+  width: 0%;
+  left: 50%;
+}
+
+.animated-icon2.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.animated-icon2.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.animated-icon2.open span:nth-child(4) {
+  top: 11px;
+  width: 0%;
+  left: 50%;
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0);
+  /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/opacity */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%;
+  /* 25% from the top */
+  width: 100%;
+  /* 100% width */
+  text-align: center;
+  /* Centered text/links */
+  margin-top: 30px;
+  /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  /* Display block instead of inline */
+  transition: 0.3s;
+  /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px
+  }
+
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+h1 {
+  color: $signature-color;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
 }
 
 .lets-talk {
@@ -210,169 +238,204 @@ code {
   padding: 10px 0 50px 10px;
 }
 
-h1 {
-  color: $signature-color;
-  font-size: 40px;
-  font-weight: bold;
-  font-family: "Open Sans", sans-serif;
-  // text-align: left;
-  text-transform: uppercase;
-}
+.landing-page {
+  background: url("./Portfolio-Images/Lucy\ Swett\ Portfolio\ Landing\ Page\ BG.jpg") bottom right;
+  background-size: cover;
+  height: 100vh;
+  // background-color: rgba(255, 255, 255, 0.486);
+  // background-blend-mode: overlay;
 
-.project-p {
-  display: block;
-  width: 440px;
-}
+  #portfolio-link {
+    display: inline-block;
+    color: white;
+    background-color: black;
+    padding: 2% 10%;
+    margin: 1% 0;
+    transition: 0.6s;
 
-.about-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+    &:hover {
+      color: black;
+      background-color: $signature-color;
+    }
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Rozha One", serif;
+    line-height: 0.9;
+    color: black;
+    margin: 0;
+  }
+
+  h1 {
+
+    font-size: 3em;
+    text-transform: unset;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    padding-top: 5%;
+  }
+
+  h3 {
+    font-size: 1.25em;
+    padding: 5% 0;
+  }
 }
 
 .about {
-    h1 {
-    display: flex;
-  }
-  img {
-    width: 430px;
-    float: left;
-  }
+  img {}
 }
 
-.about-buttons div {
-  margin-left: 10px;
+.project-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  padding: 15px 0;
 }
 
-.button-style {
+.overlay {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: calc(100% - 30px);
+  width: calc(100% - 30px);
+  opacity: 0;
+  transition: .5s ease;
   background-color: $signature-color;
-  color: black;
-  padding: 10px;
-  display: inline;
+  margin: 0 15px;
 }
 
-.button-style:hover {
-  background-color: black;
+.project:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  position: absolute;
+  text-align: center;
+  font-size: 2em;
   color: white;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.project {
+  // margin-top: -100%;
+  margin: 0 auto;
+
+  a {
+    text-decoration: none;
+    color: black;
+    // width: 280px;
+  }
+}
+
+.portfolio-slider {
+  margin: 10% 0;
+}
+
+.slider {
+  margin: 3% 0 5% 0;
 }
 
 .splide__slide img {
   width: 100%;
 }
 
-.slider, .project-info {
-  display: inline-block;
+.center {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
-.info { 
-  font-size: 1.3em;
-  line-height: 1.3em;
-}
+@media screen and (min-width: 700px) {
+  @supports (grid-area: auto) {
+    .projects {
+      // grid-template-columns: repeat(2, 1fr);
+    }
 
-.content {
-  display: flex;
-  justify-content: space-between;
-  margin: 2% 0;
-}
-
-.media-content {
-  div {
-    margin-top: 3%;
   }
 }
 
-.portfolio-slider {
-  margin: 3% 0;
-}
+@media screen and (min-width: 1025px) {
 
 
-.contact-wrap {
-  padding: 15px;
-}
+  .landing-page {
+    h1 {
+      font-size: 5em;
+    }
 
-.name {
-    display: inline-flex;
-}
+    h2 {
+      font-size: 2.5em;
+    }
 
-.contact-form {
-  margin-top: 0 auto;
-  .input-block{
-      background-color: rgba(white, .8);
-      border: solid 1px $signature-color;
-      width: 100%;
-      height: 60px;
-      padding: 25px;
-      position: relative;
-      margin-bottom: 20px;
-      // @include transition(all 0.3s ease-out);
-      label{
-          position: absolute;
-          left: 25px;
-          top: 25px;
-          display: block;
-          margin: 0;
-          font-weight: 300;
-          z-index: 1;
-          color: $secondary-color;
-          font-size: 18px;
-          line-height: 10px;
-      }
-      .form-control{
-          background-color: transparent;
-          padding: 0;
-          border: none;
-          // @include border-radius(0);
-          // @include box-shadow(none);
-          height: auto;
-          position: relative;
-          z-index: 2;
-          font-size: 18px;
-          color: $secondary-color;
-      }
-      .form-control:focus{
-          label{
-              top: 0;
-          }
-      }
-  }
-  .square-button {
-      background-color: rgba(white, .8);
-      color: darken($signature-color, 10%);
-      font-size: 26px;
-      text-transform: uppercase;
-      font-weight: 700;
-      text-align: center;
-      border-radius: 2px;
-      // @include border-radius(2px);
-      // @include transition(all 0.3s ease);
-      padding: 0 60px;
-      height: 60px;
-      border: none;
-      width: 100%;
-  }
-}
-
-//tablet and above devices
-@media (max-width: 768px) { 
-.contact-wrap {
-  width: 60%;
-  margin: auto;
-}
-}
-
-
-
-
-
-@media only screen and (max-width: 600px) {
-  .desktop-nav {
-    display: none;
+    h3 {
+      font-size: 2.25em;
+    }
   }
 
-  #nav-button {
-    width: 50px;
-    height: 50px;
-    border: none;
-    background-color: transparent;
+  @supports (grid-area: auto) {
+    .projects {
+      // grid-template-columns: repeat(3, 1fr);
+    }
+
+  }
+
+
+
+}
+
+@supports (grid-area: auto) {
+
+  // .projects {
+  //   display: grid;
+  //   grid-gap: 2em;
+  // }
+
+  // .project>a {
+  //   display: grid;
+  // }
+
+  // .project>a>* {
+  //   grid-column: 1;
+  //   grid-row: 1;
+  // }
+
+  .middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    font-weight: bold;
+    padding: 1em;
+
+    opacity: 0;
+
+    transition: all .4s;
+  }
+
+  // .project:focus,
+  // .project:hover {
+  //   margin: -5px 5px 5px -5px;
+  //   box-shadow: 5px 5px 0px 0px hsla(0, 0%, 70%, .8);
+  // }
+
+  a:focus .middle,
+  a:hover .middle {
+    background: $signature-color;
+    opacity: 1;
   }
 }

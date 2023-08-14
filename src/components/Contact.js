@@ -86,7 +86,7 @@ class Contact extends React.Component {
                 <p>Email: <a href="mailto:lucy@lucyswett.com">lucy@lucyswett.com</a></p>
                 <p>Phone: <a href="tel:904-382-4854">(904) 382-4854</a></p>
                 <section className="contact-wrap">
-                    <form action="components/email.php" onSubmit={this.handleSubmit.bind(this)} method="post" className="contact-form">
+                    <form action="email.php" onSubmit={this.handleSubmit.bind(this)} method="post" className="contact-form">
                         <div className="col-sm-6 name">
                             <div className="input-block">
                                 <label htmlFor="firstName">First Name</label>

@@ -1,8 +1,6 @@
 import React from 'react';
-import Header from './Header';
 import ImageSlideshow from './ImageSlideshow';
 import ProjectInfo from './ProjectInfo';
-import Footer from './Footer';
 
 import totl_clip from './../Portfolio-Images/TotL/TotL-clip.mp4';
 import totl_back from './../Portfolio-Images/TotL/TotL-back.jpg';
@@ -31,11 +29,11 @@ export default class TotL extends React.Component {
             }
         ];
         return (
-            <div className="body">
+            <div className="wrapper">
                 <h1>Tea on the Loose Packaging</h1>
                 <div className="content">
                     <div className="media-content">
-                        <video width="440" controls autoPlay>
+                        <video width="100%" controls autoPlay>
                             <source src={totl_clip} type="video/mp4" />
                                     Your browser does not support the video tag.
                         </video>
@@ -43,6 +41,7 @@ export default class TotL extends React.Component {
                     </div>
 
                     <ProjectInfo
+                        key={8}
                         tagline={"From overwhelmed to empowered"}
                         directions={"Click through the image carousel on the bottom left to view the final product."}
                         text={["There are too many options to choose from on the tea isle in the grocery store. You don’t want to pay for them all to figure out which ones you like. Instead, a tea box that allows you to sample four proven health giving teas would be the perfect solution. I can work with you to narrow down your options and ideas into one strong product. I work step-by-step with the client to provide transparency to the design process. Then you will be left with a good taste of design."]}

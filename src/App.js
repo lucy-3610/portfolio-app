@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Portfolio from './Portfolio';
 import LandingPage from './LandingPage';
 import ProjectInfo from './components/ProjectInfo';
@@ -10,6 +10,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import TotL from './components/TotL';
 
+import jpl from './Portfolio-Images/Projects/JPL_Blog.png';
 import coe22 from './Portfolio-Images/Projects/COE22.jpg';
 import pbts from './Portfolio-Images/Projects/PBTS.png';
 import purl from './Portfolio-Images/Projects/Purl.jpg';
@@ -20,52 +21,20 @@ import totl from './Portfolio-Images/Projects/TotL.jpg';
 import dreams from './Portfolio-Images/Projects/Dreams.png';
 
 import PortfolioSlider from './components/PortfolioSlider';
+import BookCovers from './components/BookCovers';
+// import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 
 function App() {
   
-  let totl_images = [
-    {
-      id: 7,
-      imageName: cardhub
-    },
-    {
-      id: 8,
-      imageName: totl
-    },
-    {
-      id: 9,
-      imageName: dreams
-    },
-    // {
-    //   id: 1,
-    //   imageName: jpl
-    // },
-    {
-      id: 2,
-      imageName: coe22
-    },
-    {
-      id: 3,
-      imageName: pbts
-    },
-    {
-      id: 4,
-      imageName: purl
-    },
-    {
-      id: 5,
-      imageName: accountability_counsel
-    },
-    {
-      id: 6,
-      imageName: ecc
-    }
-  ]
+  let totl_images = [{ id: 7, imageName: cardhub, link: "/cardhub", alt: "Cardhub App" }, { id: 8, imageName: totl, link: "/totl", alt: "Tea on the Loose Packaging" }, { id: 9, imageName: dreams, link: "/book-covers", alt: "Interpretation of Dreams Book Cover" }, { id: 1, imageName: jpl, link: "/jpl", alt: "Jacksonville Public Library Social Media" }, { id: 2, imageName: coe22, link: "/coe22", alt: "Church of Eleven22 Social Media" }, { id: 3, imageName: pbts, link: "/pbts", alt: "Players by the Sea Website" }, { id: 4, imageName: purl, link: "/purl", alt: "Purl Adoption Advisory Profile Book" }, { id: 5, imageName: accountability_counsel, link: "/accountability-counsel", alt: "Accountability Counsel Annual Report" }, { id: 6, imageName: ecc, link: "/ecc", alt: "Elaine Clark Center Brochure" }];
+  let book_images = [{ id: 98, imageName: totl }, { id: 99, imageName: dreams }, { id: 91, imageName: jpl }, { id: 92, imageName: coe22 }, { id: 93, imageName: pbts }, { id: 94, imageName: purl }, { id: 95, imageName: accountability_counsel }, { id: 96, imageName: ecc }, { id: 97, imageName: cardhub }];
+
 
   return (
     <div className="App">
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Switch>
+          {/* <Redirect from="/portfolio-app" to="/" /> */}
           <Route exact path="/">
             <LandingPage />
           </Route>
@@ -133,11 +102,12 @@ function App() {
           <Route
             path='/book-covers'
             render={(props) => (
-              <ProjectInfo project={"Book Cover Redesigns"}
-                tagline={"Turn a tangled mess into a clear message"}
-                text={["These book covers went from outdated to updated. I can do this for you too. You don’t want bad design, otherwise the customer will never pick up your product. That’s the same for these books. I created designs that fit these books.", <br />, <br />, "My process starts with brainstorming different ideas until the client and I mutually decide on an idea that we work together to perfect."]}
-
-              />
+              <div>
+                <Header />
+                <BookCovers />
+                <PortfolioSlider images={book_images} />
+                <Footer />
+              </div>
             )}
           />
           <Route path="/about" component={About}>

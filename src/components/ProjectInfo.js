@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class ProjectInfo extends React.Component {
     constructor(props) {
@@ -24,7 +25,9 @@ class ProjectInfo extends React.Component {
                     <div className="tagline">{this.state.projectTagline}<br /></div>
                     <p><em>{this.state.projectDirections}</em></p>
                     <p className="info">{this.state.projectInfo}</p>
+                    <Link to="/contact">
                     <div className="lets-talk">Let's Talk</div>
+                    </Link>
                 </div>
                 {/* <PortfolioSlider /> */}
 

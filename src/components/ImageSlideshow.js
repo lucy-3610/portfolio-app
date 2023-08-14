@@ -14,8 +14,6 @@ class ImageSlideshow extends React.Component {
         const primaryOptions = {
             type: 'loop',
             width: '440px',
-            fixedWidth: 200,
-            height: 200,
             perPage: `${this.props.perPage}`,
             perMove: 1,
             gap: '1rem',
@@ -23,7 +21,7 @@ class ImageSlideshow extends React.Component {
         };
         console.log("you are in imageslideshow");
         const imageItems = this.props.images.map(
-            value => <Image key={value.id} image={value.imageName} />
+            value => <Image id={value.id} image={value.imageName} link={value.link} alt={value.alt} />
         );
         return (
             <Splide options={primaryOptions} className={this.props.className}>
