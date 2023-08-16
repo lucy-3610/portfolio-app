@@ -16,7 +16,7 @@ class LandingPage extends React.Component {
                             <h1>Lucy Swett</h1>
                             <h3>Web Developer</h3>
                             <p>Motivated young professional seeking to empower people through technology.</p>
-                            <Link id="portfolio-link" to="/portfolio">PORTFOLIO</Link>
+                            <Link className="btn-theme" to="/portfolio">PORTFOLIO</Link>
                         </div>
                     </div>
                 </div>

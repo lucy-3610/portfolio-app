@@ -3,15 +3,12 @@ import React from 'react';
 import Header from './components/Header';
 import Project from './components/Project';
 import Footer from './components/Footer';
+import bchs from './Portfolio-Images/Projects/BCHS_cropped.png';
+import buckeye from './Portfolio-Images/Projects/Buckeye_Blueprint.png';
+import chemours from './Portfolio-Images/Projects/Chemours.png';
+import titanium from './Portfolio-Images/Projects/Titanium_Yoga.png';
 import jpl from './Portfolio-Images/Projects/JPL_Blog.png';
-import coe22 from './Portfolio-Images/Projects/COE22.jpg';
 import pbts from './Portfolio-Images/Projects/PBTS.png';
-import purl from './Portfolio-Images/Projects/Purl.jpg';
-import accountability_counsel from './Portfolio-Images/Projects/Accountability_Counsel.jpg';
-import ecc from './Portfolio-Images/Projects/ECC.jpg';
-import cardhub from './Portfolio-Images/Projects/Cardhub.png';
-import totl from './Portfolio-Images/Projects/TotL.jpg';
-import dreams from './Portfolio-Images/Projects/Dreams.png';
 
 class Portfolio extends React.Component {
   render() {
@@ -20,15 +17,12 @@ class Portfolio extends React.Component {
         <Header />
         <div className="container">
           <div className="row">
-            <Project image={jpl} project={"Yay"} path={"jpl"} title={"The Jacksonville Public Library"} />
-            <Project image={coe22} path={"coe22"} title={"The Church of Eleven22"} />
-            <Project image={pbts} path={"pbts"} title={"Players by the Sea"} />
-            <Project image={purl} path={"purl"} title={"Purl Adoption"} />
-            <Project image={accountability_counsel} path={"accountability-counsel"} title={"Accountability Counsel"} />
-            <Project image={ecc} path={"ecc"} title={"Elaine Clark Center"} />
-            <Project image={cardhub} path={"cardhub"} title={"Cardhub"} />
-            <Project image={totl} path={"totl"} title={"Tea on the Loose"} />
-            <Project image={dreams} path={"book-covers"} title={"Book Cover Redesigns"} />
+            <Project image={bchs} url={"https://www.bcwildcatsfootball.com/"} path={"bchs"} title={"Baker County Booster Club"} />
+            <Project image={buckeye} url={"https://buckeyeblueprint.com/"} path={"buckeye-blueprint"} title={"Buckeye Blueprint"} />
+            <Project image={chemours} url={"https://www.chemoursneighbors.com/"} path={"chemours"} title={"Chemours Neighbors"} />
+            <Project image={titanium} url={"https://www.titaniumyoga.com/"} path={"titanium"} title={"Titanium Yoga"} />
+            <Project image={jpl} project={"Yay"} url={"https://jaxpubliclibrary.org/blog/celebrate-literacy-week-youth-change"} path={"jpl"} title={"The Jacksonville Public Library"} />
+            <Project image={pbts} url={"https://playersbythesea.org/"} path={"pbts"} title={"Players by the Sea"} />
           </div>
         </div>
         <Footer />

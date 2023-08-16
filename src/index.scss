@@ -238,26 +238,36 @@ h1 {
   padding: 10px 0 50px 10px;
 }
 
+.btn-theme {
+  display: inline-block;
+  color: black;
+  background-color: $signature-color;
+  padding: 10px 50px;
+  margin: 1% 0;
+  transition: 0.6s;
+
+  &:hover {
+    color: white;
+    background-color: black;
+  }
+}
+
+.black-btn {
+  color: white;
+  background-color: black;
+
+  &:hover {
+    color: black;
+    background-color: $signature-color;
+  }
+}
+
 .landing-page {
   background: url("./Portfolio-Images/Lucy\ Swett\ Portfolio\ Landing\ Page\ BG.jpg") bottom right;
   background-size: cover;
   height: 100vh;
   // background-color: rgba(255, 255, 255, 0.486);
   // background-blend-mode: overlay;
-
-  #portfolio-link {
-    display: inline-block;
-    color: white;
-    background-color: black;
-    padding: 2% 10%;
-    margin: 1% 0;
-    transition: 0.6s;
-
-    &:hover {
-      color: black;
-      background-color: $signature-color;
-    }
-  }
 
   h1,
   h2,

@@ -11,14 +11,7 @@ import Footer from './components/Footer';
 import TotL from './components/TotL';
 
 import jpl from './Portfolio-Images/Projects/JPL_Blog.png';
-import coe22 from './Portfolio-Images/Projects/COE22.jpg';
 import pbts from './Portfolio-Images/Projects/PBTS.png';
-import purl from './Portfolio-Images/Projects/Purl.jpg';
-import accountability_counsel from './Portfolio-Images/Projects/Accountability_Counsel.jpg';
-import ecc from './Portfolio-Images/Projects/ECC.jpg';
-import cardhub from './Portfolio-Images/Projects/Cardhub.png';
-import totl from './Portfolio-Images/Projects/TotL.jpg';
-import dreams from './Portfolio-Images/Projects/Dreams.png';
 
 import PortfolioSlider from './components/PortfolioSlider';
 import BookCovers from './components/BookCovers';
@@ -26,8 +19,8 @@ import BookCovers from './components/BookCovers';
 
 function App() {
   
-  let totl_images = [{ id: 7, imageName: cardhub, link: "/cardhub", alt: "Cardhub App" }, { id: 8, imageName: totl, link: "/totl", alt: "Tea on the Loose Packaging" }, { id: 9, imageName: dreams, link: "/book-covers", alt: "Interpretation of Dreams Book Cover" }, { id: 1, imageName: jpl, link: "/jpl", alt: "Jacksonville Public Library Social Media" }, { id: 2, imageName: coe22, link: "/coe22", alt: "Church of Eleven22 Social Media" }, { id: 3, imageName: pbts, link: "/pbts", alt: "Players by the Sea Website" }, { id: 4, imageName: purl, link: "/purl", alt: "Purl Adoption Advisory Profile Book" }, { id: 5, imageName: accountability_counsel, link: "/accountability-counsel", alt: "Accountability Counsel Annual Report" }, { id: 6, imageName: ecc, link: "/ecc", alt: "Elaine Clark Center Brochure" }];
-  let book_images = [{ id: 98, imageName: totl }, { id: 99, imageName: dreams }, { id: 91, imageName: jpl }, { id: 92, imageName: coe22 }, { id: 93, imageName: pbts }, { id: 94, imageName: purl }, { id: 95, imageName: accountability_counsel }, { id: 96, imageName: ecc }, { id: 97, imageName: cardhub }];
+  // let totl_images = [{ id: 7, imageName: cardhub, link: "/cardhub", alt: "Cardhub App" }, { id: 8, imageName: totl, link: "/totl", alt: "Tea on the Loose Packaging" }, { id: 9, imageName: dreams, link: "/book-covers", alt: "Interpretation of Dreams Book Cover" }, { id: 1, imageName: jpl, link: "/jpl", alt: "Jacksonville Public Library Social Media" }, { id: 2, imageName: coe22, link: "/coe22", alt: "Church of Eleven22 Social Media" }, { id: 3, imageName: pbts, link: "/pbts", alt: "Players by the Sea Website" }, { id: 4, imageName: purl, link: "/purl", alt: "Purl Adoption Advisory Profile Book" }, { id: 5, imageName: accountability_counsel, link: "/accountability-counsel", alt: "Accountability Counsel Annual Report" }, { id: 6, imageName: ecc, link: "/ecc", alt: "Elaine Clark Center Brochure" }];
+  // let book_images = [{ id: 98, imageName: totl }, { id: 99, imageName: dreams }, { id: 91, imageName: jpl }, { id: 92, imageName: coe22 }, { id: 93, imageName: pbts }, { id: 94, imageName: purl }, { id: 95, imageName: accountability_counsel }, { id: 96, imageName: ecc }, { id: 97, imageName: cardhub }];
 
 
   return (
@@ -93,7 +86,7 @@ function App() {
               <div>
                 <Header />
                 <TotL />
-                <PortfolioSlider images={totl_images} />
+                {/* <PortfolioSlider images={totl_images} /> */}
                 <Footer />
               </div>
 
@@ -105,7 +98,7 @@ function App() {
               <div>
                 <Header />
                 <BookCovers />
-                <PortfolioSlider images={book_images} />
+                {/* <PortfolioSlider images={book_images} /> */}
                 <Footer />
               </div>
             )}

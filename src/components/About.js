@@ -2,21 +2,22 @@ import React from 'react';
 import Header from './Header';
 
 import about_img from './../Portfolio-Images/Lucy_Swett_About.jpg';
+import resume from './../Portfolio-Images/Resume.pdf';
 import Footer from './Footer';
 
 
 class About extends React.Component {
     render() {
         return (
-            <div className="about">
+            <div className="about mb-5">
                 <Header />
-                <div className="container">
+                <div className="container mb-5">
                     <div className="row">
-                        <div className='col-12'>
+                        <div className='col-12 d-flex justify-content-between mb-4'>
                             <h1>About</h1>
                             <div className="about-buttons">
-                                <a href="https://www.linkedin.com/in/lucy-swett" rel="noreferrer" target="_blank"><div className="button-style">Connect on LinkedIn</div></a>
-                                <div className="button-style">View My Resume</div>
+                                <a href="https://www.linkedin.com/in/lucy-swett" rel="noreferrer" target="_blank"><div className="btn-theme px-3 mx-3">Connect on LinkedIn</div></a>
+                                <a href={resume} rel="noreferrer" target="_blank"><div className="btn-theme px-3">View My Resume</div></a>
                             </div>
                         </div>
                         <div className='col-6'>
