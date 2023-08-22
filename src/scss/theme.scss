@@ -1,4 +1,9 @@
 $signature-color: #E95959;
+$secondary-color : #333;
+
+.color-secondary {
+    color: $secondary-color !important;
+}
 
 .hover-signature:hover,
 .hover-signature:focus {

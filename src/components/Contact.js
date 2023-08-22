@@ -62,9 +62,9 @@ class Contact extends React.Component {
                         <div className="col-3">
                             <h1>Contact</h1>
                             <p>
-                                Email: <a className="color-black hover-signature" href="mailto:lucy.f.swett@gmail.com">lucy.f.swett@gmail.com</a>
+                                Email: <a className="color-secondary hover-signature" href="mailto:lucy.f.swett@gmail.com">lucy.f.swett@gmail.com</a>
                                 <br></br>
-                                Phone: <a className="color-black hover-signature" href="tel:904-382-4854">(904) 382-4854</a>
+                                Phone: <a className="color-secondary hover-signature" href="tel:904-382-4854">(904) 382-4854</a>
                             </p>
                         </div>
                         <section className="col-9 contact-wrap">
