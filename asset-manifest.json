@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/portfolio-app/static/css/main.19c7cd31.chunk.css",
-    "main.js": "/portfolio-app/static/js/main.32640c35.chunk.js",
-    "main.js.map": "/portfolio-app/static/js/main.32640c35.chunk.js.map",
-    "runtime-main.js": "/portfolio-app/static/js/runtime-main.2159b6b0.js",
-    "runtime-main.js.map": "/portfolio-app/static/js/runtime-main.2159b6b0.js.map",
+    "main.js": "/portfolio-app/static/js/main.7f260f16.chunk.js",
+    "main.js.map": "/portfolio-app/static/js/main.7f260f16.chunk.js.map",
+    "runtime-main.js": "/portfolio-app/static/js/runtime-main.385236de.js",
+    "runtime-main.js.map": "/portfolio-app/static/js/runtime-main.385236de.js.map",
     "static/css/2.06873f48.chunk.css": "/portfolio-app/static/css/2.06873f48.chunk.css",
-    "static/js/2.c494ff97.chunk.js": "/portfolio-app/static/js/2.c494ff97.chunk.js",
-    "static/js/2.c494ff97.chunk.js.map": "/portfolio-app/static/js/2.c494ff97.chunk.js.map",
-    "static/js/3.9001237a.chunk.js": "/portfolio-app/static/js/3.9001237a.chunk.js",
-    "static/js/3.9001237a.chunk.js.map": "/portfolio-app/static/js/3.9001237a.chunk.js.map",
+    "static/js/2.dbbdddba.chunk.js": "/portfolio-app/static/js/2.dbbdddba.chunk.js",
+    "static/js/2.dbbdddba.chunk.js.map": "/portfolio-app/static/js/2.dbbdddba.chunk.js.map",
+    "static/js/3.fde04256.chunk.js": "/portfolio-app/static/js/3.fde04256.chunk.js",
+    "static/js/3.fde04256.chunk.js.map": "/portfolio-app/static/js/3.fde04256.chunk.js.map",
     "index.html": "/portfolio-app/index.html",
     "static/css/2.06873f48.chunk.css.map": "/portfolio-app/static/css/2.06873f48.chunk.css.map",
     "static/css/main.19c7cd31.chunk.css.map": "/portfolio-app/static/css/main.19c7cd31.chunk.css.map",
-    "static/js/2.c494ff97.chunk.js.LICENSE.txt": "/portfolio-app/static/js/2.c494ff97.chunk.js.LICENSE.txt",
+    "static/js/2.dbbdddba.chunk.js.LICENSE.txt": "/portfolio-app/static/js/2.dbbdddba.chunk.js.LICENSE.txt",
     "static/media/Anne1.d514f3c1.png": "/portfolio-app/static/media/Anne1.d514f3c1.png",
     "static/media/Anne2.ccdcdb6f.png": "/portfolio-app/static/media/Anne2.ccdcdb6f.png",
     "static/media/Anne3.f453244d.png": "/portfolio-app/static/media/Anne3.f453244d.png",
@@ -39,10 +39,10 @@
     "static/media/TotL-top.850d7122.jpg": "/portfolio-app/static/media/TotL-top.850d7122.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2159b6b0.js",
+    "static/js/runtime-main.385236de.js",
     "static/css/2.06873f48.chunk.css",
-    "static/js/2.c494ff97.chunk.js",
+    "static/js/2.dbbdddba.chunk.js",
     "static/css/main.19c7cd31.chunk.css",
-    "static/js/main.32640c35.chunk.js"
+    "static/js/main.7f260f16.chunk.js"
   ]
 }
