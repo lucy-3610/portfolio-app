@@ -3,8 +3,10 @@ import Header from './Header';
 
 import $ from "jquery";
 
+import emailjs from '@emailjs/browser';
+import { PatternFormat } from 'react-number-format';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import "bootstrap/scss/bootstrap";
 
 class Contact extends React.Component {
     constructor(props) {
@@ -19,28 +21,18 @@ class Contact extends React.Component {
         }
     }
 
-    handleSubmit(event) {
-        event.preventDefault();
-        console.log(this.state);
+    sendEmail = (e) => {
+        e.preventDefault();
 
-        fetch('http://localhost:3002/send', {
-            method: "POST",
-            body: JSON.stringify(this.state),
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-        }).then(
-            (response) => (response.json())
-        ).then((response) => {
-            if (response.status === 'success') {
-                alert("Message Sent.");
-                this.resetForm()
-            } else if (response.status === 'fail') {
-                alert("Message failed to send.")
-            }
-        })
-    }
+        emailjs.sendForm('Portfolio Contract Form', 'portfolio_template', '#contact-form', 'gj7UK3ZbUEd2l7NNx')
+            .then((result) => {
+                console.log(result.text);
+                this.resetForm();
+                $('#submit-message').html("Success!")
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
 
     resetForm() {
         this.setState({
@@ -68,18 +60,18 @@ class Contact extends React.Component {
                             </p>
                         </div>
                         <section className="col-9 contact-wrap">
-                            <form action="email.php" onSubmit={this.handleSubmit.bind(this)} method="post" className="contact-form">
+                            <form id="contact-form" onSubmit={this.sendEmail} className="contact-form">
                                 <div className="row">
                                     <div className="col-sm-6 name">
                                         <div className="input-block">
                                             <label htmlFor="firstName">First Name</label>
-                                            <input type="text" autoComplete="given-name" className="form-control" value={this.state.firstName} onChange={this.onFirstNameChange.bind(this)} />
+                                            <input type="text" name="first-name" autoComplete="given-name" className="form-control" value={this.state.firstName} onChange={this.onFirstNameChange.bind(this)} />
                                         </div>
                                     </div>
                                     <div className="col-sm-6 name">
                                         <div className="input-block">
                                             <label htmlFor="lastName">Last Name</label>
-                                            <input type="text" autoComplete="family-name" className="form-control" value={this.state.lastName} onChange={this.onLastNameChange.bind(this)} />
+                                            <input type="text" name="last-name" autoComplete="family-name" className="form-control" value={this.state.lastName} onChange={this.onLastNameChange.bind(this)} />
                                         </div>
                                     </div>
                                 </div>
@@ -87,13 +79,13 @@ class Contact extends React.Component {
                                     <div className="col-sm-6">
                                         <div className="input-block">
                                             <label htmlFor="phoneNumber">Phone Number</label>
-                                            <input type="tel" className="form-control" value={this.state.phoneNumber} onChange={this.onPhoneNumberChange.bind(this)} />
+                                            <PatternFormat type="tel" name="phone-number" className="form-control" value={this.state.phoneNumber} onChange={this.onPhoneNumberChange.bind(this)} format="(###) ###-####" mask="_" />
                                         </div>
                                     </div>
                                     <div className="col-sm-6">
                                         <div className="input-block">
                                             <label htmlFor="email">Email</label>
-                                            <input type="email" className="form-control" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
+                                            <input type="email" name="email" className="form-control" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
                                         </div>
                                     </div>
                                 </div>
@@ -116,7 +108,7 @@ class Contact extends React.Component {
                                 <div className="row my-3">
                                     <div className="col-sm-12">
                                         <input className="btn-theme btn-black" type="submit" name="submit" />
-                                        {/* <button className="square-button">Send</button> */}
+                                        <p id="submit-message"></p>
                                     </div>
                                 </div>
                             </form>
