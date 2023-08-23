@@ -44,12 +44,14 @@ class Contact extends Form {
 
     resetForm() {
         this.setState({
-            firstName: '',
-            lastName: '',
-            phoneNumber: '',
-            email: '',
-            messageSubject: '',
-            message: ''
+            data: {
+                firstName: '',
+                lastName: '',
+                phoneNumber: '',
+                email: '',
+                messageSubject: '',
+                message: ''
+            }
         })
     }
 
