@@ -1,6 +1,10 @@
 $signature-color: #E95959;
 $secondary-color : #333;
 
+.color-signature {
+    color: $signature-color !important;
+}
+
 .color-secondary {
     color: $secondary-color !important;
 }

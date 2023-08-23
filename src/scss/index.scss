@@ -30,6 +30,10 @@ a {
   text-decoration: none !important;
 }
 
+button:disabled {
+  opacity: 0.5;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
