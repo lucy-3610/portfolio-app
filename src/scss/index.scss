@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Questrial&family=Rozha+One&display=swap');
 @import './theme.scss';
 @import './responsive.scss';
+
 $signature-color: #E95959;
 $secondary-color : #333;
 
@@ -304,10 +305,6 @@ h1 {
     font-size: 1.25em;
     padding: 5% 0;
   }
-}
-
-.about {
-  img {}
 }
 
 .project-img {

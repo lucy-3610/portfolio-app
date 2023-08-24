@@ -6,6 +6,7 @@ import Joi from 'joi-browser';
 
 import emailjs from '@emailjs/browser';
 import $ from "jquery";
+import Footer from './Footer';
 
 class Contact extends Form {
     state = {
@@ -90,6 +91,7 @@ class Contact extends Form {
                         </section>
                     </div>
                 </div>
+                <Footer />
             </div>
         );
 
