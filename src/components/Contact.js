@@ -1,13 +1,11 @@
 import React from 'react';
 import Header from './Header';
+import Form from './common/form';
 
 import Joi from 'joi-browser';
 
 import emailjs from '@emailjs/browser';
 import $ from "jquery";
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Form from './common/form';
 
 class Contact extends Form {
     state = {
@@ -61,7 +59,7 @@ class Contact extends Form {
                 <Header />
                 <div className="container">
                     <div className="row">
-                        <div className="col-sm-3">
+                        <div className="col-xl-3">
                             <h1>Contact</h1>
                             <p>
                                 Email: <a className="color-secondary hover-signature" href="mailto:lucy.f.swett@gmail.com">lucy.f.swett@gmail.com</a>
@@ -69,7 +67,7 @@ class Contact extends Form {
                                 Phone: <a className="color-secondary hover-signature" href="tel:904-382-4854">(904) 382-4854</a>
                             </p>
                         </div>
-                        <section className="col-sm-9 contact-wrap">
+                        <section className="col-xl-9 contact-wrap">
                             <form id="contact-form" onSubmit={this.handleSubmit} className="contact-form">
                                 <div className="row">
                                     {this.renderInput("6", "firstName", "First Name", "required")}

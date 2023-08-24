@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Questrial&family=Rozha+One&display=swap');
 @import './theme.scss';
+@import './responsive.scss';
 $signature-color: #E95959;
 $secondary-color : #333;
 
@@ -11,14 +12,19 @@ body {
   font-size: 16px;
 }
 
-.desktop-nav a {
-  margin: 5px;
-  color: $signature-color !important;
-  font-family: 'Open Sans', sans-serif;
+#navbarCollapse,
+.desktop-nav {
+  flex-grow: 0;
 
-  &:hover,
-  &:focus {
-    opacity: 0.5;
+  a {
+    margin: 5px;
+    color: $signature-color !important;
+    font-family: 'Open Sans', sans-serif;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
   }
 }
 
@@ -93,7 +99,7 @@ code {
 }
 
 .animated-icon2 span {
-  background: $secondary-color;
+  background: $signature-color;
 }
 
 .animated-icon2 span:nth-child(1) {

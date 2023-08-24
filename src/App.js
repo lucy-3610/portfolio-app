@@ -15,6 +15,8 @@ import pbts from './Portfolio-Images/Projects/PBTS.png';
 
 import PortfolioSlider from './components/PortfolioSlider';
 import BookCovers from './components/BookCovers';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 
 function App() {
