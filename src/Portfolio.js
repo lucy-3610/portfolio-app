@@ -8,7 +8,7 @@ import buckeye from './Portfolio-Images/Projects/Buckeye_Blueprint.png';
 import chemours from './Portfolio-Images/Projects/Chemours.png';
 import titanium from './Portfolio-Images/Projects/Titanium_Yoga.png';
 import jpl from './Portfolio-Images/Projects/JPL_Blog.png';
-import pbts from './Portfolio-Images/Projects/PBTS.png';
+import culliton from './Portfolio-Images/Projects/Culliton Channel Consulting.jpg';
 
 class Portfolio extends React.Component {
   render() {
@@ -22,7 +22,7 @@ class Portfolio extends React.Component {
             <Project image={chemours} url={"https://www.chemoursneighbors.com/"} path={"chemours"} title={"Chemours Neighbors"} />
             <Project image={titanium} url={"https://www.titaniumyoga.com/"} path={"titanium"} title={"Titanium Yoga"} />
             <Project image={jpl} project={"Yay"} url={"https://jaxpubliclibrary.org/blog/celebrate-literacy-week-youth-change"} path={"jpl"} title={"The Jacksonville Public Library"} />
-            <Project image={pbts} url={"https://playersbythesea.org/"} path={"pbts"} title={"Players by the Sea"} />
+            <Project image={culliton} url={"https://cullitonchannelconsulting.com/"} path={"pbts"} title={"Culliton Channel Consulting"} />
           </div>
         </div>
         <Footer />
