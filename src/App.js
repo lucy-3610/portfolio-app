@@ -11,7 +11,6 @@ import Footer from './components/Footer';
 import TotL from './components/TotL';
 
 import jpl from './Portfolio-Images/Projects/JPL_Blog.png';
-import pbts from './Portfolio-Images/Projects/PBTS.png';
 
 import PortfolioSlider from './components/PortfolioSlider';
 import BookCovers from './components/BookCovers';
