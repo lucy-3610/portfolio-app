@@ -13,19 +13,27 @@ export default class TotL extends React.Component {
         let totl_images = [
             {
                 id: 1,
-                imageName: totl_back
+                imageName: totl_back,
+                alt: "alt",
+                link: "alt"
             },
             {
                 id: 2,
-                imageName: totl_front
+                imageName: totl_front,
+                alt: "alt",
+                link: "alt"
             },
             {
                 id: 3,
-                imageName: totl_inside
+                imageName: totl_inside,
+                alt: "alt",
+                link: "alt"
             },
             {
                 id: 4,
-                imageName: totl_top
+                imageName: totl_top,
+                alt: "alt",
+                link: "alt"
             }
         ];
         return (

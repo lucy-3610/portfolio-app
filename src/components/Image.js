@@ -6,9 +6,7 @@ export default class Image extends React.Component {
     render() {
         return (
             <SplideSlide key={this.props.id}>
-                <Link to={this.props.link}>
                 <img src={this.props.image} key={this.props.id} alt={this.props.alt} />
-                </Link>
             </SplideSlide>
         );
 

@@ -230,15 +230,15 @@ h1 {
 }
 
 .lets-talk {
-  background-color: $signature-color;
-  width: 135px;
-  height: 60px;
+  // background-color: $signature-color;
+  // width: 135px;
+  // height: 60px;
   font-size: 24px;
-  color: white;
+  // color: white;
   font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 }
 
 .tagline {
@@ -325,8 +325,11 @@ h1 {
   }
 }
 
-.portfolio-slider {
-  margin: 10% 0;
+.portfolio-slider .splide__slide img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .slider {
@@ -335,6 +338,11 @@ h1 {
 
 .splide__slide img {
   width: 100%;
+}
+
+.splide__arrow:disabled {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .center {

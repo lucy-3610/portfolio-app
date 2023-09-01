@@ -9,6 +9,10 @@ $secondary-color : #333;
     color: $secondary-color !important;
 }
 
+.color-white {
+    color: white !important;
+}
+
 .hover-signature:hover,
 .hover-signature:focus {
     color: $signature-color !important;
